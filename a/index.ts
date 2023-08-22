@@ -73,24 +73,24 @@ type Reader = person & {
 };
 //12
 function oldReader(readers: Reader[]): Reader {
-    let indexx:number = 0
-    let age:number = 0
-    for (let index = 0; index < readers.length; index++) {
-        if (readers[index].age > age){
-            indexx = index
-        }
+  let indexx: number = 0;
+  let age: number = 0;
+  for (let index = 0; index < readers.length; index++) {
+    if (readers[index].age > age) {
+      indexx = index;
     }
+  }
   return readers[indexx];
 }
 //13
 function oldook(readers: Reader[]): book {
-    let indexx:number = 0
-    let Year:number = readers[0].favoriteBook.Year
-    for (let index = 0; index < readers.length; index++) {
-        if (readers[index].favoriteBook.Year > Year){
-            indexx = index
-        }
+  let indexx: number = 0;
+  let Year: number = readers[0].favoriteBook.Year;
+  for (let index = 0; index < readers.length; index++) {
+    if (readers[index].favoriteBook.Year > Year) {
+      indexx = index;
     }
+  }
   return readers[indexx].favoriteBook;
 }
 
@@ -106,22 +106,58 @@ function sumDubled(x: number[]): number {
   return y;
 }
 //2
-type AreaMeasurements = {height:number, width:number}
-function area(x:AreaMeasurements ): number {
-  return x.height*x.width;
+type AreaMeasurements = { height: number; width: number };
+function area(x: AreaMeasurements): number {
+  return x.height * x.width;
 }
 //3
 function isPalindrome(x: string): boolean {
-  const y:string = x.split('').reverse().join('')
+  const y: string = x.split("").reverse().join("");
   return x === y;
 }
 //4
 function capitalLetters(x: string[]): string[] {
-  return x.map((ed:string):string => ed[0].toUpperCase()+ed.slice(1).toLowerCase());
+  return x.map(
+    (ed: string): string => ed[0].toUpperCase() + ed.slice(1).toLowerCase()
+  );
 }
 //5
 function RemoveDuplicates(x: number[]): number[] {
   return [...new Set(x)];
 }
+//6
+interface Input {
+  firstName: string;
+  lastName: string;
+}
+interface Output {
+  firstInitial: string;
+  lastInitial: string;
+}
 
+function Initial(x: Input): Output {
+  return { firstInitial: x.firstName[0], lastInitial: x.lastName[0] };
+}
+//7
+interface person2 {
+  name: string;
+  age: number;
+}
+function averageAges(readers: person2[]): number {
+  let average: number = 0;
+  for (const person of readers) {
+    average += person.age;
+  }
+  return average / readers.length;
+}
+//8
+interface minmax {min: number, max:number}
 
+function maxAndMin(x: number[]): minmax {
+  return {min:Math.min(...x),max:Math.max(...x)};
+}
+//9
+function reversArrey(x: any[]): void {
+  console.log(x.reverse());
+  ;
+}
