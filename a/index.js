@@ -63,10 +63,6 @@ function isMinor(x) {
         return false;
     }
 }
-11;
-// type Reader = {
-//     favouriteBook : book;
-//     };
 //12
 function oldReader(readers) {
     var indexx = 0;

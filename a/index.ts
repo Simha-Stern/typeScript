@@ -1,3 +1,4 @@
+// exercise 1
 //1
 function biger(x: number, y: number): number {
   if (x > y) {
@@ -66,7 +67,7 @@ interface book {
   Author: string;
   Year: number;
 }
-11;
+//11;
 type Reader = person & {
   favoriteBook: book;
 };
@@ -92,3 +93,35 @@ function oldook(readers: Reader[]): book {
     }
   return readers[indexx].favoriteBook;
 }
+
+// exercise 2
+//1
+function sumDubled(x: number[]): number {
+  let y: number = 0;
+  for (const num of x) {
+    if (num % 2 === 0) {
+      y += num;
+    }
+  }
+  return y;
+}
+//2
+type AreaMeasurements = {height:number, width:number}
+function area(x:AreaMeasurements ): number {
+  return x.height*x.width;
+}
+//3
+function isPalindrome(x: string): boolean {
+  const y:string = x.split('').reverse().join('')
+  return x === y;
+}
+//4
+function capitalLetters(x: string[]): string[] {
+  return x.map((ed:string):string => ed[0].toUpperCase()+ed.slice(1).toLowerCase());
+}
+//5
+function RemoveDuplicates(x: number[]): number[] {
+  return [...new Set(x)];
+}
+
+
