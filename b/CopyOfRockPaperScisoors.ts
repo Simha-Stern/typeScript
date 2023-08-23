@@ -45,7 +45,7 @@ function playGame(player1:player, player2:player):Result {
     return 'player2';
 }
 
-const player1: player = { name: 'player 1', move: move.Scissors };
+const player1: player = { name: 'player 1', move: move.Rock };
 const player2: player = { name: 'player 2', move: move.Scissors };
 
 const winner: Result = playGame(player1, player2);
