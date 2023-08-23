@@ -14,7 +14,7 @@ author: string;
 interface DVD {
   type: string;
   title: string;
-  duration: string;
+  duration: number;
 };
 
 // Test data
@@ -44,6 +44,7 @@ function printItemsData<t>(items: t[]):void {
 
 
 // Step 5:  הדפיסו את כל המידע הנתון 
+printItemsData(libraryItems)
 
 // Step 6: ממשו את פונקצית הפילטור כך שתחזיר סרטים ארוכים משעתיים והדפיסו את המערך 
 
