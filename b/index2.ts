@@ -20,12 +20,12 @@ const getValueByKeyArrow:<T, K extends keyof T>(obj: T, key: K) => T[K] = <T, K 
 }
 
 
+console.log(getValueByKey({ss:'ff'},'ss'));
 
 //מתקדם
 //צור פונקציה גנרית שמקבלת מערך של אובייקטים ואובייקט כארגומנטים. הפונקציה תוסיף את האובייקט שהתקבל לכל איבר במערך 
 // עליכם לקרוא על ולהשתמש ב: Record  
 
-console.log(getValueByKey({ss:'ff'},'ss'));
 
 // כתבו פונקציה שמקבלת אובייקט ושם שדה(מפתח).  הפונקציה תחזיר אובייקט חדש בלי המפתח
 // קראו על Omit
